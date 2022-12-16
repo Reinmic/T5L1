@@ -15,3 +15,14 @@ else
 fi
 ------------------------------------------------------
 
+Script 2:
+#!/bin/bash
+echo
+read -p "Dime un valor mayor que  0: " value
+if [ $((value % 2)) -eq 0 ]
+then
+  echo "El valor es par"
+else
+  echo "El valor es impar"
+fi
+
