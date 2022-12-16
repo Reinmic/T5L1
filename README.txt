@@ -1,4 +1,4 @@
-Script1: 
+Script 1: 
 #!/bin/bash
 echo
 read -p"Introduce el primer valor: " num1
@@ -25,4 +25,21 @@ then
 else
   echo "El valor es impar"
 fi
+------------------------------------------------------
 
+Script 3:
+#!/bin/bash
+read -p"Dime tu nota: " grade
+
+if [ $grade -lt 5 ]; then
+  echo "Suspendido"
+elif [ $grade -lt 6 ]; then
+  echo "Aprobado"
+elif [ $grade -lt 8 ]; then
+  echo "Bien"
+elif [ $grade -lt 9 ]; then
+  echo "Notable"
+else
+  echo "Excelente"
+fi
+------------------------------------------------------
