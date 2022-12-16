@@ -108,3 +108,44 @@ fi
 
 echo "Precio total: $total_cost euros"
 ----------------------------------------------------
+
+Script 7:
+#!/bin/bash
+read -p"Dime un dìa en numero del mes (1-30):" day
+
+if [[ $day -lt 1 || $day -gt 30 ]]; then
+
+  echo "Error: Introduce un numero de dia valido del mes (1-30)"
+  exit 1
+fi
+
+
+weekday=$(((day - 1) % 7 + 1))
+
+echo "Dìa $day es"
+
+
+case $weekday in
+1)
+    echo "Lunes"
+    ;;
+  2)
+    echo "Martes"
+    ;;
+  3)
+    echo "Miercoles"
+    ;;
+  4)
+    echo "Jueves"
+    ;;
+  5)
+echo "Viernes"
+    ;;
+  6)
+    echo "Sabado"
+    ;;
+  7)
+    echo "Domingo"
+    ;;
+esac
+----------------------------------------------------------------
