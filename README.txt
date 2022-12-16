@@ -88,3 +88,23 @@ fi
 echo "Total sum: $sum"
 echo "Promedio: $avg"
 ----------------------------------------------------
+
+Script 6:
+#!/bin/bash
+echo
+read -p "Dime la cantidad de agua en litros que consumes: " liters
+
+total_cost=0
+
+if [ "$liters" -le 50 ]; then
+  total_cost=20
+
+elif [ "$liters" -gt 50 ] && [ "$liters" -le 200 ]; then
+  total_cost=$((20 + (liters - 50) * 2/10))
+
+else
+  total_cost=$((20 + (200 - 50) * 2/10 + (liters - 200) * 1/10))
+fi
+
+echo "Precio total: $total_cost euros"
+----------------------------------------------------
